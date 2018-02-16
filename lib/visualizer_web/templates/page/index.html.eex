@@ -170,10 +170,17 @@
 
       force.on("tick", function() {
 
-        if (nodes.length>0) {
-          nodes[0].x = w / 4;
-          nodes[0].y = h / 4;
+        <%# clientNode = findNodeIndex("Client");
+        if (clientNode != -1) {
+          nodes[clientNode].x = w / 6;
+          nodes[clientNode].y = h / 6;
         }
+
+        webNode = findNodeIndex("Web");
+        if (webNode != -1) {
+          nodes[webNode].x = (w / 5)*3;
+          nodes[webNode].y = (h / 5)*2.5;
+        } %>
 
         node.attr("transform", function(d) {
           return "translate(" + d.x + "," + d.y + ")";
