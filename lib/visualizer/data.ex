@@ -92,7 +92,7 @@ defmodule Visualizer.Data do
   end
 
   def generate_uuid() do
-    token = UUID.uuid1()
+    token = UUID.uuid4()
   end
 
 end
