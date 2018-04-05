@@ -10,24 +10,25 @@ defmodule VisualizerWeb.Router do
   end
 
   pipeline :api do
-    plug :accepts, ["json"]    
+    plug :accepts, ["json"]
   end
 
   scope "/", VisualizerWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index        
+    get "/", PageController, :index
   end
 
   scope "/api", VisualizerWeb do
     pipe_through :api
 
+    get "/token", ApiController, :token
     get "/nodes", ApiController, :nodes
     get "/addnode", ApiController, :add_node
     get "/addlink", ApiController, :add_link
     get "/updatelink", ApiController, :update_link
-    get "/removenode", ApiController, :remove_node  
-    get "/removelink", ApiController, :remove_link 
-    get "/reset", ApiController, :reset    
+    get "/removenode", ApiController, :remove_node
+    get "/removelink", ApiController, :remove_link
+    get "/reset", ApiController, :reset
   end
 end
