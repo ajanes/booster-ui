@@ -86,4 +86,8 @@ defmodule VisualizerWeb.ApiController do
     |>render("data.json", data: Data.generate_uuid())
   end
 
+  def bandwidth(conn, %{"token" => token}) do
+    Logger.debug "Updating data of token #{token}"
+  end
+
 end

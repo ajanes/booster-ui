@@ -30,5 +30,6 @@ defmodule VisualizerWeb.Router do
     get "/removenode", ApiController, :remove_node
     get "/removelink", ApiController, :remove_link
     get "/reset", ApiController, :reset
+    post "/bandwidth", ApiController, :data
   end
 end
