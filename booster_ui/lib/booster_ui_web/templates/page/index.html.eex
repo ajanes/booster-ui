@@ -1,0 +1,22 @@
+<p><img src="images/rocket.png">&nbsp;<b>Booster UI</b></p>
+<p>This visualization shows how booster connects to nodes and endpoints. For more about Booster, see <a href="https://github.com/danielmorandini/booster-network">here</a>.</p>
+
+<%# http://bl.ocks.org/hugolpz/cd89b50d834828261b45af9e7a5ce926 %>
+
+<style>
+  .link {
+    stroke: #2E2E2E;
+  }
+
+  .node {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .textClass {
+    stroke: #323232;
+    font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    stroke-width: .5;
+    font-size: 14px;
+  }
+</style>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Booster UI, a UI for booster">
+    <meta name="author" content="Andrea Janes">
+
+    <title>Booster UI</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/rocket.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+
+  <body>  
+    <div class="container-fluid">
+      <header class="header">        
+      </header>
+
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+
+      <div>
+        <a href="https://d3js.org/">d3</a> is used under <a href="https://github.com/d3/d3/blob/master/LICENSE">BSD 3-Clause "New" or "Revised"</a> License.<br/>
+        Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>
